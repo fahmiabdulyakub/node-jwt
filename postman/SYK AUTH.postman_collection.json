@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "b589c27e-e8e9-45c0-b506-39174f8af095",
+		"name": "SYK AUTH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register akun",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "uM4dQNuTrdvz92q0E2lzlWoSTVeKUSxUmh8jT74V9L3JRkxIAwEyIJxFMfzToFrKqbg9lI8w15tcT6Jv0urGqmuxXUbc0aJUW88aeJv",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama_user\": \"febri\",\r\n    \"email\": \"febriyunus@gmail.com\",\r\n    \"username\": \"yoga\",\r\n    \"password\": \"test123\"    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/service/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"service",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login akun",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "uM4dQNuTrdvz92q0E2lzlWoSTVeKUSxUmh8jT74V9L3JRkxIAwEyIJxFMfzToFrKqbg9lI8w15tcT6Jv0urGqmuxXUbc0aJUW88aeJv",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"user\": \"test123\",\r\n   \"password\": \"test123\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/service/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"service",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
